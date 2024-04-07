@@ -1,6 +1,6 @@
-FROM Tepthonee/thesource:slim-buster
+FROM 71341525/Rdthon:slim-buster
 
-RUN git clone https://github.com/Tepthonee/thesource.git /root/Tepthon
+RUN git clone https://github.com/71341525/Rdthon.git /root/Tepthon
 
 WORKDIR /root/Tepthon
 
