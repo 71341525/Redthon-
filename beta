@@ -6,7 +6,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "Tepthon" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UvYXJjaGl2ZS9tYWluLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbi9hcmNoaXZlL21haW4uemlw" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/main.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UvYXJjaGl2ZS9tYWluLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbi9hcmNoaXZlL21haW4uemlw" | base64 -d
     fi
 }
 
@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "Tepthon" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UuZ2l0" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbi5naXQ=" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UuZ2l0" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbi5naXQ=" | base64 -d`
     fi
     echo "$rlink"
 }
@@ -83,7 +83,7 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "⌭ جـاري بـدء تنصيـب تـيـبثون ⌭"
+    echo "⌭ جـاري بـدء تنصيـب ريدثون ⌭"
     echo "
 
     "
