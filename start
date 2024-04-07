@@ -6,7 +6,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "71341525" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UvYXJjaGl2ZS9tYXN0ZXIuemlw=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbi9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/lite.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UvYXJjaGl2ZS9tYXN0ZXIuemlw=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbi9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     fi
 }
 
@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "71341525" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2Ug===" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbg==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2Ug===" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tLzcxMzQxNTI1L1JkdGhvbg==" | base64 -d`
     fi
     echo "$rlink"
 }
