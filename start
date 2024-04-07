@@ -4,7 +4,7 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Tepthonee" ]]
+    if [[ $UPSTREAM_REPO == "71341525" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2UvYXJjaGl2ZS9tYXN0ZXIuemlw=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -24,7 +24,7 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Tepthonee" ]]
+    if [[ $UPSTREAM_REPO == "71341525" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RlcHRob25lZS90aGVzb3VyY2Ug===" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -44,7 +44,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/Tepthonee/thesource"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/71341525/Rdthon"
 ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -68,7 +68,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="DevMohammad.zip"
+    zippath="DevBiLaL.zip"
     echo "⌭ جاري تنزيل اكواد السورس ⌭"
     wget -q $(_get_ziplink) -O "$zippath"
     echo "⌭ تفريغ البيانات ⌭"
