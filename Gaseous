@@ -1,1 +1,76 @@
 
+import os , sys 
+from time import sleep
+
+installed = 0
+os.system('pip3 install --upgrade pip')
+
+try:
+    import requests
+except:
+    os.system('pip install requests')
+    installed +=1
+
+try:
+    import user_agent
+except:
+    os.system('pip install user_agent')
+    installed +=1
+
+try:
+    import colorama
+except:
+    os.system('pip install colorama')
+    installed +=1
+
+try:
+    import myigbot
+except:
+    os.system('pip install myigbot')
+    installed +=1
+
+try:
+    from uuid import uuid4
+except:
+    os.system('pip install uuid')
+    installed +=1
+
+
+try:
+    from bs4 import BeautifulSoup
+except:
+    os.system('pip install bs4')
+    installed +=1
+
+try:
+    import wget
+except:
+    os.system('pip install wget')
+    installed +=1
+
+try:
+    import telebot
+except:
+    os.system('pip uninstall telebot')
+    os.system('pip uninstall PyTelegramBotAPI')
+    os.system('pip install PyTelegramBotAPI==3.6.7')
+    installed +=1
+    
+try:
+    import pyfiglet
+except:
+    os.system('pip install pyfiglet')
+    installed +=1
+    
+try:
+    import webbrowser
+except:
+    os.system('pip install webbrowser')
+    installed +=1
+
+os.system('cls' if os.name == 'nt' else 'clear')
+
+print('[-] Done Install '+str(installed)+ 'library')
+webbrowser.open('https://t.me/bthon')
+sleep(5)
+quit(Gaseous)
